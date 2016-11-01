@@ -19,6 +19,7 @@ public class UserService implements IUserService {
     public String getAllUser() {
         User user = new User();
         user.setId(1);
+        user.setPasswd("jj");
         this.userDao.saveUser(user);
         return "aa";
     }
