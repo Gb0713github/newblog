@@ -1,9 +1,9 @@
-package web.newblog.service;
+package web.newblog.service.userService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import web.newblog.dao.IUserDao;
+import web.newblog.dao.userDao.IUserDao;
 import web.newblog.entity.User;
 
 /**
@@ -18,9 +18,8 @@ public class UserService implements IUserService {
 
     public String getAllUser() {
         User user = new User();
-        user.setId(1);
-        user.setPasswd("jj");
-        this.userDao.saveUser(user);
+        user.setId(2);
+        this.userDao.deleteEntity(user);
         return "aa";
     }
 }
