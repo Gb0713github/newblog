@@ -18,8 +18,6 @@ public class UserService implements IUserService {
 
     public String getAllUser() {
         User user = new User();
-        user.setId(2);
-        this.userDao.deleteEntity(user);
         return "aa";
     }
 }
